@@ -1,16 +1,27 @@
+import 'package:first_app/SingleChild/Align.dart';
+import 'package:first_app/SingleChild/Baseline.dart';
+import 'package:first_app/SingleChild/Centre.dart';
+import 'package:first_app/SingleChild/ConstrainedBox.dart';
+import 'package:first_app/SingleChild/CustomSingleLayout.dart';
+import 'package:first_app/SingleChild/Expanded.dart';
+import 'package:first_app/SingleChild/FittedBox.dart';
+import 'package:first_app/SingleChild/LimitedBox.dart';
+import 'package:first_app/SingleChild/OffStage.dart';
+import 'package:first_app/SingleChild/Padding.dart';
 import 'package:flutter/material.dart';
 
-class InterModels extends StatefulWidget {
+class SingleChild extends StatefulWidget {
+  const SingleChild({Key? key}) : super(key: key);
 
   @override
-  _InterModelsState createState() => _InterModelsState();
+  _SingleChildState createState() => _SingleChildState();
 }
 
-class _InterModelsState extends State<InterModels> {
+class _SingleChildState extends State<SingleChild> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Interaction Models",
+      appBar: AppBar(title: Text("Single Child Layouts",
         textAlign: TextAlign.center,
         style: TextStyle(
           fontFamily: "Roboto",
@@ -31,7 +42,7 @@ class _InterModelsState extends State<InterModels> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          //Navigator.push(context,MaterialPageRoute(builder: (context) => Cupertino()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => AlignWid()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -44,7 +55,7 @@ class _InterModelsState extends State<InterModels> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (01). AbsorbPointer',
+                            child: Text(' (01). Align',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -65,8 +76,7 @@ class _InterModelsState extends State<InterModels> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          //Navigator.push(context, MaterialPageRoute(builder: (context) => AniBuilder()
-
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => BaselineWid()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -79,7 +89,7 @@ class _InterModelsState extends State<InterModels> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (02). Dismissible',
+                            child: Text(' (02). Baseline',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -100,8 +110,7 @@ class _InterModelsState extends State<InterModels> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => AniContainer()
-
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => CentreWid()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -114,7 +123,7 @@ class _InterModelsState extends State<InterModels> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (03). DragTarget',
+                            child: Text(' (03). Centre',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -136,8 +145,7 @@ class _InterModelsState extends State<InterModels> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()
-
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => ConstrainBox()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -150,7 +158,7 @@ class _InterModelsState extends State<InterModels> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (04). Draggable',
+                            child: Text(' (04). Constrained Box',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -171,8 +179,7 @@ class _InterModelsState extends State<InterModels> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          //Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()
-
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => CusSingleLayout()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -185,7 +192,7 @@ class _InterModelsState extends State<InterModels> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (05). ScrollableSheet',
+                            child: Text(' (05). Custom SingleChild Layout',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -206,8 +213,7 @@ class _InterModelsState extends State<InterModels> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          //  Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()
-
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => Expand()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -220,7 +226,7 @@ class _InterModelsState extends State<InterModels> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (06). GestureDetector',
+                            child: Text(' (06). Expanded',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -242,8 +248,7 @@ class _InterModelsState extends State<InterModels> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()
-
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => FittedWig()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -256,7 +261,7 @@ class _InterModelsState extends State<InterModels> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (07). IgnorePointer',
+                            child: Text(' (07). Fitted Box',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -277,8 +282,7 @@ class _InterModelsState extends State<InterModels> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          //  Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()));
-
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LimitBox()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -291,7 +295,7 @@ class _InterModelsState extends State<InterModels> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (08). InteractiveViewer',
+                            child: Text(' (08). Limited Box',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -312,7 +316,7 @@ class _InterModelsState extends State<InterModels> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => OffSta()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -325,7 +329,7 @@ class _InterModelsState extends State<InterModels> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (09). LongPressDraggable',
+                            child: Text(' (09). Off Stage',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -347,7 +351,7 @@ class _InterModelsState extends State<InterModels> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()));
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => PaddingsWid()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -360,7 +364,7 @@ class _InterModelsState extends State<InterModels> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (10). Scrollable',
+                            child: Text(' (10). Padding',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -374,6 +378,7 @@ class _InterModelsState extends State<InterModels> {
                     ),
                   ],
                 ),
+                
               ]
           ),
         ),

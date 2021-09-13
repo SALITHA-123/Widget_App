@@ -5,9 +5,11 @@ import 'package:first_app/Asyncs/Asyncs.dart';
 import 'package:first_app/Basics/Basics.dart';
 import 'package:first_app/Cupertino/Cupertino.dart';
 import 'package:first_app/Inputs/Inputs.dart';
-import 'package:first_app/InterModels.dart';
+import 'package:first_app/InterModels/InterModels.dart';
+import 'package:first_app/Layouts/Layouts.dart';
+import 'package:first_app/Material%20Components/MaterialComponents.dart';
 import 'package:first_app/Paintings/Paintings.dart';
-import 'package:first_app/Scrollings.dart';
+import 'package:first_app/Scrollings/Scrollings.dart';
 import 'package:first_app/Stylings/Stylings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -24,15 +26,9 @@ class CatState extends State<Catalog>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Flutter Widgets",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-            fontFamily: "Roboto",
-          fontSize: 30,
-          fontWeight: FontWeight.bold,
-          color: Colors.grey.shade800,
-          ),
-        ),
+      appBar: AppBar(title: Text('Widget Catalog', style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -318,6 +314,10 @@ class CatState extends State<Catalog>{
                     ),
                   ),
                   Expanded(flex: 1,
+                    child: GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LayOuts()));
+                        },
                       child: Container(
                         margin: EdgeInsets.all(12),
                           alignment: Alignment(0,0),
@@ -339,6 +339,7 @@ class CatState extends State<Catalog>{
                               )
                           )
                       )
+                     )
                   )
                 ],
               ),
@@ -349,7 +350,7 @@ class CatState extends State<Catalog>{
                   Expanded(flex: 1,
                     child: GestureDetector(
                       onTap: (){
-                        //   Navigator.push(context, MaterialPageRoute(builder: (context) => ()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => MatCompo()));
                       },
                       child: Container(
                         margin: EdgeInsets.all(12),

@@ -1,3 +1,14 @@
+import 'package:first_app/InterModels/DragSheet.dart';
+import 'package:first_app/InterModels/Scroll.dart';
+import 'package:first_app/InterModels/Scrollable.dart';
+import 'package:first_app/Scrollings/CustomView.dart';
+import 'package:first_app/Scrollings/GridView.dart';
+import 'package:first_app/Scrollings/ListView.dart';
+import 'package:first_app/Scrollings/NestedScroll.dart';
+import 'package:first_app/Scrollings/NotificationListner.dart';
+import 'package:first_app/Scrollings/PageView.dart';
+import 'package:first_app/Scrollings/RecListView.dart';
+import 'package:first_app/Scrollings/RefreshIndicator.dart';
 import 'package:flutter/material.dart';
 
 class Scrollings extends StatefulWidget {
@@ -32,7 +43,7 @@ class _ScrollingsState extends State<Scrollings> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          //Navigator.push(context,MaterialPageRoute(builder: (context) => Cupertino()));
+                          Navigator.push(context,MaterialPageRoute(builder: (context) => CustomScroll()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -66,8 +77,7 @@ class _ScrollingsState extends State<Scrollings> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          //Navigator.push(context, MaterialPageRoute(builder: (context) => AniBuilder()
-
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => DragSheet()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -101,8 +111,7 @@ class _ScrollingsState extends State<Scrollings> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => AniContainer()
-
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => Grid()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -137,8 +146,7 @@ class _ScrollingsState extends State<Scrollings> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()
-
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => List()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -172,8 +180,7 @@ class _ScrollingsState extends State<Scrollings> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          //Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()
-
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => NestScroll()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -207,9 +214,8 @@ class _ScrollingsState extends State<Scrollings> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          //  Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()
-
-                        },
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => NotiListner()));
+                          },
                         child: Container(
                             margin: EdgeInsets.all(12),
                             alignment: Alignment(-1,0),
@@ -243,8 +249,7 @@ class _ScrollingsState extends State<Scrollings> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()
-
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => PageVi()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -278,8 +283,7 @@ class _ScrollingsState extends State<Scrollings> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          //  Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()));
-
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => ReFresh()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -313,7 +317,7 @@ class _ScrollingsState extends State<Scrollings> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => RecList()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -341,14 +345,13 @@ class _ScrollingsState extends State<Scrollings> {
                   ],
                 ),
 
-
                 //Row10
                 Row(
                   children: [
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()));
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => RecList()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -382,7 +385,7 @@ class _ScrollingsState extends State<Scrollings> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          //  Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()));
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => Scroll()));
 
                         },
                         child: Container(
@@ -411,13 +414,13 @@ class _ScrollingsState extends State<Scrollings> {
                   ],
                 ),
 
-                //Row09
+                //Row12
                 Row(
                   children: [
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => Scrol()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -446,13 +449,13 @@ class _ScrollingsState extends State<Scrollings> {
                 ),
 
 
-                //Row10
+                //Row13
                 Row(
                   children: [
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          // Navigator.push(context, MaterialPageRoute(builder: (context) => Animations()));
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => Scroll()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),

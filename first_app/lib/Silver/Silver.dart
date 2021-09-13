@@ -1,17 +1,19 @@
-import 'package:first_app/Accessibility/ExculudeSemantics.dart';
-import 'package:first_app/Accessibility/Seman.dart';
+import 'package:first_app/Silver/SilverAppBar.dart';
+import 'package:first_app/Silver/SilverList.dart';
+import 'package:first_app/Silver/SilverTopBox.dart';
 import 'package:flutter/material.dart';
 
-class Accessibility extends StatefulWidget {
+class Silver extends StatefulWidget {
+
   @override
-  _AccessibilityState createState() =>  _AccessibilityState();
+  _SilverState createState() => _SilverState();
 }
 
-class  _AccessibilityState extends State<Accessibility> {
+class _SilverState extends State<Silver> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Accessibility Widgets",
+      appBar: AppBar(title: Text("Silver Layouts",
         textAlign: TextAlign.center,
         style: TextStyle(
           fontFamily: "Roboto",
@@ -32,9 +34,7 @@ class  _AccessibilityState extends State<Accessibility> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Seman()
-                          )
-                          );
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => SilverAppBars()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -47,7 +47,7 @@ class  _AccessibilityState extends State<Accessibility> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (01). Semantics',
+                            child: Text(' (01). Silver App Bar',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -68,8 +68,7 @@ class  _AccessibilityState extends State<Accessibility> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          Navigator.push(
-                              context, MaterialPageRoute(builder: (context) => Seman()));
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => SilLists()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -82,7 +81,7 @@ class  _AccessibilityState extends State<Accessibility> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (02). Merge Semantics',
+                            child: Text(' (02). Silver List',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -103,7 +102,7 @@ class  _AccessibilityState extends State<Accessibility> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => ExSeman()));
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => SilverTops()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -111,12 +110,12 @@ class  _AccessibilityState extends State<Accessibility> {
                             height: 60,
                             width: 200,
                             decoration: BoxDecoration(
-                                color: Colors.green,
+                                color: Colors.orange,
                                 borderRadius: BorderRadius.all(
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (03). Exclude Semantics',
+                            child: Text(' (03). Silver TopBox Adapter',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -130,6 +129,7 @@ class  _AccessibilityState extends State<Accessibility> {
                     ),
                   ],
                 ),
+
               ]
           ),
         ),

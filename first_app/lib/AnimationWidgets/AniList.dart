@@ -52,7 +52,7 @@ class _AniListState extends State<AniList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Columns', style: TextStyle(fontSize: 30,),),
+      appBar: AppBar(title: Text('Animated ListState', style: TextStyle(fontSize: 30,),),
         centerTitle: true,
         backgroundColor: Colors.blue,
           actions: <Widget>[

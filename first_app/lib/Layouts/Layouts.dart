@@ -1,17 +1,19 @@
-import 'package:first_app/Accessibility/ExculudeSemantics.dart';
-import 'package:first_app/Accessibility/Seman.dart';
+import 'package:first_app/MultiChild/MultiChild.dart';
+import 'package:first_app/Silver/Silver.dart';
+import 'package:first_app/SingleChild/SingleChild.dart';
 import 'package:flutter/material.dart';
 
-class Accessibility extends StatefulWidget {
+class LayOuts extends StatefulWidget {
   @override
-  _AccessibilityState createState() =>  _AccessibilityState();
+  _LayOutsState createState() => _LayOutsState();
 }
 
-class  _AccessibilityState extends State<Accessibility> {
+
+class _LayOutsState extends State<LayOuts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Accessibility Widgets",
+      appBar: AppBar(title: Text("Flutter Layouts",
         textAlign: TextAlign.center,
         style: TextStyle(
           fontFamily: "Roboto",
@@ -32,7 +34,7 @@ class  _AccessibilityState extends State<Accessibility> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Seman()
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => SingleChild()
                           )
                           );
                         },
@@ -42,12 +44,12 @@ class  _AccessibilityState extends State<Accessibility> {
                             height: 60,
                             width: 100,
                             decoration: BoxDecoration(
-                                color: Colors.red,
+                                color: Colors.redAccent,
                                 borderRadius: BorderRadius.all(
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (01). Semantics',
+                            child: Text(' (01). Single Child Layouts',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -69,7 +71,7 @@ class  _AccessibilityState extends State<Accessibility> {
                       child: GestureDetector(
                         onTap: (){
                           Navigator.push(
-                              context, MaterialPageRoute(builder: (context) => Seman()));
+                              context, MaterialPageRoute(builder: (context) => MultiChild()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -82,7 +84,7 @@ class  _AccessibilityState extends State<Accessibility> {
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (02). Merge Semantics',
+                            child: Text(' (02). Multi Child Layouts',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
@@ -103,7 +105,8 @@ class  _AccessibilityState extends State<Accessibility> {
                     Expanded(flex: 1,
                       child: GestureDetector(
                         onTap: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => ExSeman()));
+                          Navigator.push(
+                              context, MaterialPageRoute(builder: (context) => Silver()));
                         },
                         child: Container(
                             margin: EdgeInsets.all(12),
@@ -111,12 +114,12 @@ class  _AccessibilityState extends State<Accessibility> {
                             height: 60,
                             width: 200,
                             decoration: BoxDecoration(
-                                color: Colors.green,
+                                color: Colors.greenAccent,
                                 borderRadius: BorderRadius.all(
                                     Radius.circular(10)
                                 )
                             ),
-                            child: Text(' (03). Exclude Semantics',
+                            child: Text(' (03). Silver Layouts',
                                 textAlign: TextAlign.start,
                                 style: new TextStyle(
                                   fontSize: 25.0,
